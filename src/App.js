@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import ListaDeDesejos from './components/TaskList';
+import Convite from './components/convite';
+import './index.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [showListaDeDesejos, setShowListaDeDesejos] = useState(true);
+
+    const togglePage = () => {
+        setShowListaDeDesejos(!showListaDeDesejos);
+    };
+
+    return (
+        <div className="container">
+            <nav>
+                <button onClick={togglePage}>
+                    {showListaDeDesejos ? 'Ir para Convite' : 'Voltar para Lista de Desejos'}
+                </button>
+            </nav>
+            {showListaDeDesejos ? <ListaDeDesejos /> : <Convite />}
+        </div>
+    );
 }
 
 export default App;
