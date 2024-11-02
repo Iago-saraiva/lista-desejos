@@ -99,7 +99,7 @@ function App() {
             <button className="btn-delete" onClick={clearList}>Limpar Lista</button>
             <div> 
         <a className='convite' href="https://iago-saraiva.github.io/Convite/" target="_blank" rel="noopener noreferrer">
-        Convite Amigo secreto
+        Amigo secreto
         </a>
         </div>
         </div>
