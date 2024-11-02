@@ -101,3 +101,14 @@ li.completed {
 .btn-delete:hover {
   background-color: #b95761;
 }
+
+.convite {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.convite:hover {
+  color: aquamarine;
+}
